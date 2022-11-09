@@ -7,3 +7,80 @@
 body {
   background-color: rgb(41, 42, 42);
 }
+h1 {
+  color: rgb(64, 246, 115);
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 2px 1px rgb(113, 110, 110);
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/*   ********  SEARCH BAR   ********  */
+.searchBar {
+  border-bottom: 3px solid yellowgreen;
+  border-top: 3px solid yellowgreen;
+  background-color: lightgray;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/*   ********  SELECT OPTION   ********  */
+.select {
+  width: 60%;
+  padding: 10px 20px;
+}
+
+/*   ******** SEARCH BUTTON   ********  */
+.button {
+  width: 20%;
+  height: 30px;
+  align-items: center;
+  background-color: darkgray;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px black;
+  padding: 5px 5px;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: yellowgreen;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgb(69, 69, 69);
+  transition: 300ms;
+}
+
+/*   ******** MAIN SECTION    ********  */
+
+main {
+  border: 3px solid rgb(4, 224, 244);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/*  ******** FAVORITES SECTION  ********  */
+.favorites {
+  width: 40%;
+  height: auto;
+  background-color: rgb(65, 65, 65);
+}
+h2 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/*  ********  RECIPES SECTION  ********  */
+.recipes {
+  width: 60%;
+  height: auto;
+  background-color: rgb(138, 136, 136);
+}
