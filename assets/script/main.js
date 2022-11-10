@@ -6,16 +6,12 @@ var selectCategory = document.querySelector("#categories").value;
 // MEAL DB API
 var mealList = document.querySelector(".meal");
 
+
 function loadRecipes() {
-  // function getSelectValue() {
-  //   console.log(selectCategory);
-  // }
-  // function searchBtn() {
-  //   var searchBtn = document.querySelector(".button");
-  //   searchBtn.addEventListener(onclick);
-  // }
-  var requestUrl =
-    "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + selectCategory;
+
+  let searchCategory = document.querySelector("#search-cat").value;
+  console.log(searchCategory);
+  var requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + searchCategory; 
   console.log(requestUrl);
 
   fetch(requestUrl)
@@ -24,6 +20,7 @@ function loadRecipes() {
     })
     .then(function (data) {
       console.log(data);
+
       for (var i = 0; i < data.meals.length; i++) {
         var ulList = document.querySelector(".recipeslist");
         var recipe = document.createElement("li");
@@ -34,4 +31,14 @@ function loadRecipes() {
       }
     });
 }
-loadRecipes();
+document.querySelector("#search-btn").addEventListener("click",loadRecipes);
+
+// Show user search results 
+// Add list of recipes to recipe div
+// Each recipe will have a link to its own meal page
+// url of meal page will pass on the meal id ex: meal.html?id=52925
+})
+}
+// create new function to get meal Id, then do a request to get meal recipe
+// function to run when meal loads 
+
