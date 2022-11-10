@@ -24,13 +24,13 @@ function loadRecipes() {
     })
     .then(function (data) {
       console.log(data);
-      for (var i = 0; i < data.length; i++) {
-        var ulList = document.querySelector("recipelist");
+      for (var i = 0; i < data.meals.length; i++) {
+        var ulList = document.querySelector(".recipeslist");
         var recipe = document.createElement("li");
-        var recipeName = document.createTextNode("p");
-        recipe.textContent = data[i].strMeal;
+        var recipeName = document.createTextNode(data.meals[i].strMeal);
+        // recipe.textContent = data[i].strMeal;
+        recipe.appendChild(recipeName);
         ulList.appendChild(recipe);
-        console.log(ulList);
       }
     });
 }
