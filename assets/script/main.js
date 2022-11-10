@@ -1,8 +1,13 @@
 // MEAL DB API
 var mealList = document.querySelector(".meal");
 
+
+
 function getApi() {
-  var requestUrl = "www.themealdb.com/api/json/v1/1/random.php";
+  let searchCategory = document.querySelector("#search-cat").value;
+  console.log(searchCategory);
+  var requestUrl = "http://www.themealdb.com/api/json/v1/1/filter.php?c=" + searchCategory; 
+
 
   console.log(requestUrl);
 
@@ -12,7 +17,9 @@ function getApi() {
     })
     .then(function (data) {
       console.log(data);
-      }
+    })
 }
 
-getApi();
+// getApi();
+document.querySelector("#search-btn").addEventListener("click", getApi);
+ 
