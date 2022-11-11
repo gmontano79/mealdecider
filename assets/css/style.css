@@ -84,3 +84,15 @@ h2 {
   height: auto;
   background-color: rgb(138, 136, 136);
 }
+
+/*  DAYLI SUGGESTION */
+
+.suggestion {
+  background-color: rgb(194, 248, 248);
+  color: aqua;
+  text-shadow: 3px 3px 5px rgb(66, 65, 65);
+  width: 100%;
+}
+a:active {
+  color: white;
+}
