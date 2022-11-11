@@ -1,8 +1,6 @@
 // GLOBAL VARIABLES
 var selectCategory = document.querySelector("#search-cat").value;
 
-//  SELECT OPTIONS VALUES
-
 // MEAL DB API
 var mealList = document.querySelector(".meal");
 
@@ -23,15 +21,41 @@ function loadRecipes() {
       for (var i = 0; i < data.meals.length; i++) {
         var ulList = document.querySelector(".recipeslist");
         var recipe = document.createElement("li");
+        var meal = document.createElement("a");
+        meal.href = "./meal.html?id=" + data.meals[i].idMeal;
+        meal.target = "_blank";
+        meal.innerHTML = data.meals[i].strMeal;
         var recipeName = document.createTextNode(data.meals[i].strMeal);
         // recipe.textContent = data[i].strMeal;
-        recipe.appendChild(recipeName);
+        recipe.appendChild(meal);
         ulList.appendChild(recipe);
       }
     });
 }
 document.querySelector("#search-btn").addEventListener("click", loadRecipes);
 
+// *****************************************
+//   *****  COCKTAIL DB -  SECOND API  *****
+
+var cocktail = document.querySelector(".randomCocktail");
+
+function loadCocktail() {
+  var requestUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+  console.log(requestUrl);
+
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
+
+  var newCocktail = document.createElement("p");
+  var cocktailRecipe = document.createTextNode(data);
+  cocktail.appendChild(newCocktail);
+}
+loadCocktail();
 // Show user search results
 // Add list of recipes to recipe div
 // Each recipe will have a link to its own meal page
