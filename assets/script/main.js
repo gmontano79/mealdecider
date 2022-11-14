@@ -25,6 +25,7 @@ function loadRecipes() {
         meal.href = "./meal.html?id=" + data.meals[i].idMeal;
         meal.target = "_blank";
         meal.innerHTML = data.meals[i].strMeal;
+        meal.style.listStyle = "none";
         var recipeName = document.createTextNode(data.meals[i].strMeal);
         // recipe.textContent = data[i].strMeal;
         recipe.appendChild(meal);
@@ -52,7 +53,7 @@ function loadCocktail() {
 
       // COCKTAIL NAME
       var newCocktail = document.querySelector(".cocktailname");
-      var cocktailRecipe = document.createTextNode("Drink Name:   " + data.drinks[0].strDrink);
+      var cocktailRecipe = document.createTextNode(data.drinks[0].strDrink);
       console.log(cocktailRecipe);
       cocktail.appendChild(newCocktail);
       newCocktail.append(cocktailRecipe);
@@ -65,11 +66,27 @@ function loadCocktail() {
 
       // COCKTAIL INSTRUCTION
       const instructions = document.querySelector(".newins");
-      var cocktailInstructions = document.createTextNode("Instructions:" + "  " + data.drinks[0].strInstructions);
+      var cocktailInstructions = document.createTextNode(data.drinks[0].strInstructions);
       cocktail.appendChild(instructions);
       instructions.append(cocktailInstructions);
 
       console.log(cocktailInstructions);
+
+      // COCKTAIL INGRIDIENTS
+
+      const ingredients = document.querySelector(".cocktailingredients");
+      var ingUl = document.querySelector(".ingridientsUl")
+      var newIng1 = document.createElement("li");
+      var ing1 = document.createTextNode(data.drinks[0].strIngredient1);
+      console.log(ing1);
+      ingUl.appendChild(newIng1);
+      newIng1.append(ing1);
+
+
+
+
+      console.log(ingredients);
+
 
     });
 }
