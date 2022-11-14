@@ -75,7 +75,7 @@ function loadCocktail() {
       // COCKTAIL INGRIDIENTS
 
       const ingredients = document.querySelector(".cocktailingredients");
-      var ingUl = document.querySelector(".ingridientsUl")
+      var ingUl = document.querySelector(".ingredientsUl")
       var newIng1 = document.createElement("li");
       var ing1 = document.createTextNode(data.drinks[0].strIngredient1);
       console.log(ing1);
@@ -85,7 +85,7 @@ function loadCocktail() {
 
 
 
-      console.log(ingredients);
+      console.log(ingUl);
 
 
     });
