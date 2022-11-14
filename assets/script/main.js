@@ -49,11 +49,29 @@ function loadCocktail() {
     })
     .then(function (data) {
       console.log(data);
-    });
 
-  var newCocktail = document.createElement("p");
-  var cocktailRecipe = document.createTextNode(data);
-  cocktail.appendChild(newCocktail);
+      // COCKTAIL NAME
+      var newCocktail = document.querySelector(".cocktailname");
+      var cocktailRecipe = document.createTextNode("Drink Name:   " + data.drinks[0].strDrink);
+      console.log(cocktailRecipe);
+      cocktail.appendChild(newCocktail);
+      newCocktail.append(cocktailRecipe);
+
+      // COCKTAIL IMAGE 
+      const drinkImage = data.drinks[0].strDrinkThumb;
+      const image = document.querySelector(".drinkimg");
+      image.src = drinkImage
+
+
+      // COCKTAIL INSTRUCTION
+      const instructions = document.querySelector(".newins");
+      var cocktailInstructions = document.createTextNode("Instructions:" + "  " + data.drinks[0].strInstructions);
+      cocktail.appendChild(instructions);
+      instructions.append(cocktailInstructions);
+
+      console.log(cocktailInstructions);
+
+    });
 }
 loadCocktail();
 // Show user search results
