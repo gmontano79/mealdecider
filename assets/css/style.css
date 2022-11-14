@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 body {
@@ -12,7 +14,9 @@ body {
   background-size: cover;
 }
 h1 {
+
   color: #9C0028;
+
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
@@ -23,9 +27,11 @@ h1 {
 
 /*   ********  SEARCH BAR   ********  */
 .searchBar {
+
   border-bottom: 3px solid #9C0028;
   border-top: 3px solid #9C0028;
   background-color: rgba(255, 255, 255, 0.6);;
+
   width: 50%;
   height: auto;
   margin: auto;
@@ -54,7 +60,9 @@ h1 {
 }
 
 .button:hover {
+
   background-color: #9C0028;
+
   font-weight: bold;
   box-shadow: 2px 2px 5px rgb(69, 69, 69);
   transition: 300ms;
@@ -76,6 +84,7 @@ main {
   background-color: rgba(255, 255, 255, 0.8);
   margin-right: 15px;
   box-shadow: 3px 4px 30px gray;
+
   border-bottom: 3px solid #9C0028;
   border-top: 3px solid #9C0028;
 }
@@ -98,6 +107,7 @@ main {
   border-bottom: 1px solid #9C0028;
 }
 
+
 h2 {
   text-align: center;
   color: white;
@@ -107,6 +117,7 @@ h2 {
 /*  ********  RECIPES SECTION  ********  */
 .recipes {
   width: 30%;
+
   height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 3px 4px 30px gray;
@@ -125,6 +136,7 @@ h2 {
   background-color: rgba(255, 255, 255, 0.6);;
   width: 50%;
   height: auto;
+
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -134,7 +146,9 @@ h2 {
 /*  DAYLI SUGGESTION */
 
 .suggestion {
+
   background-color: #9C0028;
+
   color: aqua;
   text-shadow: 3px 3px 5px rgb(66, 65, 65);
   width: 50%;
@@ -142,4 +156,28 @@ h2 {
 }
 a:active {
   color: white;
+}
+.drinkimg {
+  width: 200px;
+  height: auto;
+}
+.randomCocktail {
+  border: 3px solid yellowgreen;
+  display: flex;
+}
+.cocktailname {
+  font-size: 2em;
+  margin-left: 20px;
+  color: white;
+  order: 2;
+}
+.drinkimg {
+  margin: 10px;
+  order: 1;
+}
+
+.newins {
+  color: white;
+  order: 3;
+  font-size: 1.5em;
 }
