@@ -23,6 +23,7 @@ The deployment application link is https://gmontano79.github.io/mealdecider/
 APIs:
 
 - The Meal DB: www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+- The Cocktail DB: https://www.thecocktaildb.com/api/json/v1/1/random.php
 
 ## License
 
