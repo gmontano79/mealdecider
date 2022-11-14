@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 body {
@@ -12,7 +14,9 @@ body {
   background-size: cover;
 }
 h1 {
-  color: #9c0028;
+
+  color: #9C0028;
+
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
@@ -23,9 +27,11 @@ h1 {
 
 /*   ********  SEARCH BAR   ********  */
 .searchBar {
-  border-bottom: 3px solid #9c0028;
-  border-top: 3px solid #9c0028;
-  background-color: rgba(255, 255, 255, 0.6);
+
+  border-bottom: 3px solid #9C0028;
+  border-top: 3px solid #9C0028;
+  background-color: rgba(255, 255, 255, 0.6);;
+
   width: 50%;
   height: auto;
   margin: auto;
@@ -54,7 +60,9 @@ h1 {
 }
 
 .button:hover {
-  background-color: #9c0028;
+
+  background-color: #9C0028;
+
   font-weight: bold;
   box-shadow: 2px 2px 5px rgb(69, 69, 69);
   transition: 300ms;
@@ -76,12 +84,13 @@ main {
   background-color: rgba(255, 255, 255, 0.8);
   margin-right: 15px;
   box-shadow: 3px 4px 30px gray;
-  border-bottom: 3px solid #9c0028;
-  border-top: 3px solid #9c0028;
+
+  border-bottom: 3px solid #9C0028;
+  border-top: 3px solid #9C0028;
 }
 
-/* Save Favorite Button */
-#favorites-btn {
+  /* Save Favorite Button */
+  #favorites-btn {
   display: flex;
   position: relative;
   border: dashed;
@@ -91,12 +100,13 @@ main {
   text-align: center;
   background-color: rgb(211, 82, 82);
   color: black;
-}
+  } 
 
 #favoriteslist {
-  color: #9c0028;
-  border-bottom: 1px solid #9c0028;
+  color:#9C0028;
+  border-bottom: 1px solid #9C0028;
 }
+
 
 h2 {
   text-align: center;
@@ -107,24 +117,26 @@ h2 {
 /*  ********  RECIPES SECTION  ********  */
 .recipes {
   width: 30%;
+
   height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 3px 4px 30px gray;
-  border-bottom: 3px solid #9c0028;
-  border-top: 3px solid #9c0028;
+  border-bottom: 3px solid #9C0028;
+  border-top: 3px solid #9C0028;
 }
 
 #recipes {
-  color: #9c0028;
-  border-bottom: 1px solid #9c0028;
+  color:#9C0028;
+  border-bottom: 1px solid #9C0028;
 }
 
 .current-recipe {
-  border-bottom: 3px solid #9c0028;
-  border-top: 3px solid #9c0028;
-  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 3px solid #9C0028;
+  border-top: 3px solid #9C0028;
+  background-color: rgba(255, 255, 255, 0.6);;
   width: 50%;
   height: auto;
+
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -134,7 +146,9 @@ h2 {
 /*  DAYLI SUGGESTION */
 
 .suggestion {
-  background-color: #9c0028;
+
+  background-color: #9C0028;
+
   color: aqua;
   text-shadow: 3px 3px 5px rgb(66, 65, 65);
   width: 50%;
