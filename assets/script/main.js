@@ -83,6 +83,17 @@ function loadCocktail() {
       newIng1.append(ing1);
 
 
+      var ingArr = [];
+      for (var i = 1; i < 16; i++) {
+        console.log(i);
+        var newIngredient = data.drinks[0]["strIngredient" + i];
+        if (newIngredient != null) {
+          ingArr.push(newIngredient)
+        }
+
+
+      }
+      console.log(ingArr);
 
 
       console.log(ingUl);
@@ -91,6 +102,13 @@ function loadCocktail() {
     });
 }
 loadCocktail();
+
+// *************************************
+
+
+
+
+
 // Show user search results
 // Add list of recipes to recipe div
 // Each recipe will have a link to its own meal page
