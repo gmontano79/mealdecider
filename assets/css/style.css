@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -12,7 +13,8 @@ body {
   background-size: cover;
 }
 h1 {
-  color: #9C0028;
+  color: #9c0028;
+
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
@@ -23,9 +25,9 @@ h1 {
 
 /*   ********  SEARCH BAR   ********  */
 .searchBar {
-  border-bottom: 3px solid #9C0028;
-  border-top: 3px solid #9C0028;
-  background-color: rgba(255, 255, 255, 0.6);;
+  border-bottom: 3px solid #9c0028;
+  border-top: 3px solid #9c0028;
+  background-color: rgba(255, 255, 255, 0.6);
   width: 50%;
   height: auto;
   margin: auto;
@@ -54,7 +56,8 @@ h1 {
 }
 
 .button:hover {
-  background-color: #9C0028;
+  background-color: #9c0028;
+
   font-weight: bold;
   box-shadow: 2px 2px 5px rgb(69, 69, 69);
   transition: 300ms;
@@ -65,10 +68,19 @@ h1 {
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin-top: 30px;
 }
 
+/* SECTION1 */
+.section1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /*  ******** FAVORITES SECTION  ********  */
 .favorites {
   width: 20%;
@@ -76,12 +88,13 @@ main {
   background-color: rgba(255, 255, 255, 0.8);
   margin-right: 15px;
   box-shadow: 3px 4px 30px gray;
-  border-bottom: 3px solid #9C0028;
-  border-top: 3px solid #9C0028;
+
+  border-bottom: 3px solid #9c0028;
+  border-top: 3px solid #9c0028;
 }
 
-  /* Save Favorite Button */
-  #favorites-btn {
+/* Save Favorite Button */
+#favorites-btn {
   display: flex;
   position: relative;
   border: dashed;
@@ -91,11 +104,11 @@ main {
   text-align: center;
   background-color: rgb(211, 82, 82);
   color: black;
-  } 
+}
 
 #favoriteslist {
-  color:#9C0028;
-  border-bottom: 1px solid #9C0028;
+  color: #9c0028;
+  border-bottom: 1px solid #9c0028;
 }
 
 h2 {
@@ -105,41 +118,83 @@ h2 {
 }
 
 /*  ********  RECIPES SECTION  ********  */
+
 .recipes {
   width: 30%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 3px 4px 30px gray;
-  border-bottom: 3px solid #9C0028;
-  border-top: 3px solid #9C0028;
+  border-bottom: 3px solid #9c0028;
+  border-top: 3px solid #9c0028;
 }
 
 #recipes {
-  color:#9C0028;
-  border-bottom: 1px solid #9C0028;
+  color: #9c0028;
+  border-bottom: 1px solid #9c0028;
 }
 
 .current-recipe {
-  border-bottom: 3px solid #9C0028;
-  border-top: 3px solid #9C0028;
-  background-color: rgba(255, 255, 255, 0.6);;
+  border-bottom: 3px solid #9c0028;
+  border-top: 3px solid #9c0028;
+  background-color: rgba(255, 255, 255, 0.6);
   width: 50%;
   height: auto;
+
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/*  DAYLI SUGGESTION */
+/*  COCKTAIL SUGGESTION */
 
 .suggestion {
-  background-color: #9C0028;
+  background-color: #9c0028;
+
   color: aqua;
   text-shadow: 3px 3px 5px rgb(66, 65, 65);
-  width: 50%;
+  width: 60%;
+  margin-top: 30px;
+  align-items: ;
+}
+#suggestion {
+  text-decoration: underline;
+}
+
+.drinkimg {
+  width: 200px;
+  height: auto;
+  margin: auto;
+}
+.randomCocktail {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
-a:active {
+.randomCocktail p {
   color: white;
+  font-weight: bold;
+}
+.cocktailname {
+  font-size: 2em;
+  margin-left: 20px;
+  color: white;
+  order: 2;
+  width: 100%;
+}
+.drinkimg {
+  order: 1;
+}
+.cocktailingredients {
+  order: 3;
+  color: white;
+  width: 20%;
+  margin: 20px;
+  font-size: 1.5em;
+}
+.newins {
+  color: white;
+  order: 4;
+  font-size: 1.5em;
+  margin: 20px;
 }
