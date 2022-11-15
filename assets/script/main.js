@@ -1,5 +1,5 @@
 // GLOBAL VARIABLES
-var selectCategory = document.querySelector("#search-cat").value;
+// var selectCategory = document.querySelector("#search-cat").value;
 
 // MEAL DB API
 var mealList = document.querySelector(".meal");
@@ -99,3 +99,4 @@ loadCocktail();
 //}
 // create new function to get meal Id, then do a request to get meal recipe
 // function to run when meal loads
+
