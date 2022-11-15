@@ -95,15 +95,15 @@ main {
 
 /* Save Favorite Button */
 #favorites-btn {
-  display: flex;
-  position: relative;
-  border: dashed;
-  border-radius: 50%;
-  padding: 30px;
-  /* align-items: left; */
-  text-align: center;
-  background-color: rgb(211, 82, 82);
-  color: black;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: auto;
+  font-weight: bold;
+  cursor: pointer;
+}
+#favorites-btn:hover {
+  text-shadow: 3px 3px 5px rgb(71, 71, 71);
 }
 
 #favoriteslist {
@@ -148,9 +148,9 @@ h2 {
 
 /*  COCKTAIL SUGGESTION */
 
-.suggestion {
+.cocktaildiv {
   background-color: #9c0028;
-
+  width: 50%;
   color: aqua;
   text-shadow: 3px 3px 5px rgb(66, 65, 65);
   width: 60%;
@@ -188,7 +188,7 @@ h2 {
 .cocktailingredients {
   order: 3;
   color: white;
-  width: 20%;
+  width: 100%;
   margin: 20px;
   font-size: 1.5em;
 }
@@ -197,4 +197,24 @@ h2 {
   order: 4;
   font-size: 1.5em;
   margin: 20px;
+}
+
+.cocktailingredients span {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* *************************************** */
+/* *********** MEAL PAGE STYLING ********* */
+
+.current-recipe {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mealp {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
 }
