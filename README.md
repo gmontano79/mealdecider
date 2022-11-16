@@ -16,7 +16,15 @@ The deployment application link is https://gmontano79.github.io/mealdecider/
 
 ### **Initial Page**
 
-![alt Page Screenshoot - Initial View]()
+![alt Page Screenshoot - Initial View](./assets/images/screenshoot-1.JPG)
+
+### **Category Selection**
+
+![alt Page Screenshoot - Initial View](./assets/images/screenshoot-2.JPG)
+
+### **Selected Recipe Page**
+
+![alt Page Screenshoot - Initial View](./assets/images/screenshoot-3.JPG)
 
 ## Credits
 
