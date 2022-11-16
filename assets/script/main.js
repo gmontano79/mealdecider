@@ -76,13 +76,27 @@ function loadCocktail() {
 
       const ingredients = document.querySelector(".cocktailingredients");
       var ingUl = document.querySelector(".ingredientsUl")
-      var newIng1 = document.createElement("li");
-      var ing1 = document.createTextNode(data.drinks[0].strIngredient1);
-      console.log(ing1);
-      ingUl.appendChild(newIng1);
-      newIng1.append(ing1);
+      var newIng = document.createElement("li");
 
 
+      var ingArr = [];
+      for (var i = 1; i < 16; i++) {
+        var newIngredient = data.drinks[0]["strIngredient" + i];
+        if (newIngredient != null) {
+          ingArr.push(newIngredient)
+
+          // newIng.innerHTML = newIngredient;
+
+        }
+
+
+      }
+      for (var i = 0; i < ingArr.length; i++) {
+        var newIngTest = document.createElement("li");
+        ingUl.appendChild(newIngTest);
+        newIngTest.append(ingArr[i])
+      }
+      console.log(ingArr);
 
 
       console.log(ingUl);
@@ -91,6 +105,13 @@ function loadCocktail() {
     });
 }
 loadCocktail();
+
+// *************************************
+
+
+
+
+
 // Show user search results
 // Add list of recipes to recipe div
 // Each recipe will have a link to its own meal page
