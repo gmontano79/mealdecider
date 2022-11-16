@@ -119,10 +119,10 @@ h2 {
 
 /* Go back button styling */
 .go-bck {
-  position: relative; 
+  position: relative;
   bottom: 0;
   right: 10px;
-  width: auto; 
+  width: auto;
   font-weight: bold;
   cursor: pointer;
   text-align: left;
@@ -175,20 +175,20 @@ h2 {
 .suggestion {
   border-bottom: 3px solid #dfc9cf;
   border-top: 3px solid #dfc9cf;
-  background-color: #9c0028;
-  width: 85%;
+  background-color: rgba(156, 0, 40, 0.8);
+  width: 60%;
   height: auto;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  opacity: 75%;
 }
 
 .drinkimg {
   width: 200px;
   height: auto;
   margin: auto;
+  opacity: 100%;
 }
 .randomCocktail {
   display: flex;
@@ -232,6 +232,18 @@ h2 {
   margin: 0;
 }
 
+.ingredientsUl {
+}
+
+.ingredientsUl li {
+  list-style: ;
+  text-align: start;
+  font-size: 1.3em;
+}
+.newins {
+  font-size: 1.3em;
+}
+
 /* *************************************** */
 /* *********** MEAL PAGE STYLING ********* */
 
@@ -264,4 +276,14 @@ h2 {
   text-align: center;
 }
 
-
+.mealingredientsUl li {
+  text-align: center;
+  margin-left: 30px;
+  font-size: 1.3em;
+  list-style: none;
+}
+.mealinstructions {
+  font-size: 1.3em;
+  text-align: justify;
+  margin: 2px 30px;
+}
