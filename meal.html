@@ -12,37 +12,40 @@
   </head>
   <body> 
     <header>
-      <h1>Great Choice!</h1>
+      <h1>Great choice, enjoy your meal!</h1>
     </header>
    <!-- create meal div -->
    <!-- need meal title, ingrediants, image of meal and instructions -->
   <div class="current-recipe">
           <h2 id="meal-title">Recipe</h2>
         <div class="currentmeal">
-
+            <br>
         </div>
         <div class="mealimg1">
           <img src="" alt="meal photo" class="mealimg">
            <p class="mealp"></p> 
         </div>
+        <br>
         <div class="mealingredients"> <p class="mealp"> Ingredients:</p>
           <ul class="mealingredientsUl"></p> 
         </div>
         <div> <p class="mealp"> Instructions:</p>
          <p class="mealinstructions"></p> 
         </div>
+        
+        <br>
 
-   <div>
-    <button id="favorites-btn">
+    <div>
+    <button onclick="faveBtn()" id="favorites-btn">
       <p>Add to my favorites <span>&#128151</span></p>
          </button>
-   </div>
-   
+
+      <!-- make sure to make Nav bar to come back to search page -->   
+         <button id="go-bck" class="go-bck">
+      <p>Main Page<span>&#10232</span></p></button>
+   </div>  
   </div>
    
-    
- <!-- make sure to make Nav bar to come back to search page -->
-
     <!-- SCRIPTS -->
     
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

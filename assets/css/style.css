@@ -14,8 +14,7 @@ body {
 }
 h1 {
   color: #9c0028;
-
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: center;
   font-weight: bold;
   text-shadow: 3px 4px 5px rgb(43, 42, 42);
@@ -102,6 +101,7 @@ main {
   font-weight: bold;
   cursor: pointer;
 }
+
 #favorites-btn:hover {
   text-shadow: 3px 3px 5px rgb(71, 71, 71);
 }
@@ -115,6 +115,21 @@ h2 {
   text-align: center;
   color: white;
   font-weight: bold;
+}
+
+/* Go back button styling */
+.go-bck {
+  position: relative; 
+  bottom: 0;
+  right: 10px;
+  width: auto; 
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+}
+
+.go-bck:hover {
+  text-shadow: 3px 3px 5px rgb(71, 71, 71);
 }
 
 /*  ********  RECIPES SECTION  ********  */
@@ -154,10 +169,20 @@ h2 {
   text-shadow: 3px 3px 5px rgb(66, 65, 65);
   width: 60%;
   margin-top: 30px;
-  align-items: ;
+  align-items: center;
 }
-#suggestion {
-  text-decoration: underline;
+
+.suggestion {
+  border-bottom: 3px solid #dfc9cf;
+  border-top: 3px solid #dfc9cf;
+  background-color: #9c0028;
+  width: 85%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 75%;
 }
 
 .drinkimg {
@@ -169,10 +194,12 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  align-items: center;
 }
 .randomCocktail p {
   color: white;
   font-weight: bold;
+  text-align: center;
 }
 .cocktailname {
   font-size: 2em;
@@ -189,13 +216,15 @@ h2 {
   color: white;
   width: 100%;
   margin: 20px;
-  font-size: 1.5em;
+  font-size: 1em;
+  text-align: center;
 }
 .newins {
   color: white;
   order: 4;
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 20px;
+  text-align: center;
 }
 
 .cocktailingredients span {
@@ -210,17 +239,18 @@ h2 {
   display: flex;
   flex-direction: column;
   position: relative;
+  text-align: center;
 }
 
 #meal-title {
   color: #9c0028;
   font-weight: bold;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .mealp {
   color: #9c0028;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -233,3 +263,5 @@ h2 {
 .mealimg1 {
   text-align: center;
 }
+
+

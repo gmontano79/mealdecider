@@ -107,8 +107,13 @@ function loadCocktail() {
 loadCocktail();
 
 // *************************************
+// Functionality for Add To Favorite Button
 
 
+
+
+// Save value to local storage
+localStorage.setItem()
 
 
 
