@@ -91,6 +91,9 @@ main {
 
   border-bottom: 3px solid #9c0028;
   border-top: 3px solid #9c0028;
+  overflow: auto;
+  overflow-y: auto;
+  max-height: 300px;
 }
 
 /* Save Favorite Button */
@@ -309,4 +312,69 @@ h2 {
   margin: auto;
 
   font-size: 1em;
+}
+
+/* ***********  MEDIA QUERY STYLES ******************* */
+@media screen and (max-width: 675px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .recipes {
+    width: 50%;
+    font-size: 0.8em;
+  }
+
+  .favorites {
+    width: 40%;
+    font-size: 0.8em;
+  }
+
+  .suggestion {
+    width: 100%;
+  }
+
+  .drinkimg {
+    width: 150px;
+  }
+  .cocktailname {
+    font-size: 1em;
+  }
+  .ingredientsUl {
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .ingredientsUl li {
+    font-size: 1em;
+  }
+  .newins {
+    font-size: 1em;
+  }
+
+  .footer {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  /* MEAL PAGE */
+  .current-recipe {
+    width: 100%;
+  }
+  #meal-title {
+    font-size: 1.5em;
+  }
+  .mealingredientsUl {
+    font-size: 1em;
+  }
+  .mealinstructions {
+    font-size: 1em;
+  }
 }

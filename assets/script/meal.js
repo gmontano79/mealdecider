@@ -83,11 +83,11 @@ function faveBtn() {
 
   } else {
     currentFaves = JSON.parse(localStorage.getItem('favorites'))
-    // if (!currentFaves.includes(currentMeal)) {
-    currentFaves.push({ thisMealId: currentIdMeal, meal: currentMeal })
-    localStorage.setItem('favorites', JSON.stringify(currentFaves))
+    if (!currentFaves.includes({ thisMealId: currentIdMeal, meal: currentMeal })) {
+      currentFaves.push({ thisMealId: currentIdMeal, meal: currentMeal })
+      localStorage.setItem('favorites', JSON.stringify(currentFaves))
 
-    // }
+    }
     // we wnt to parse the faves that we obtain on line 65
     // (idealy this would be an array because more than one)
     // add current recipe to end of array 
