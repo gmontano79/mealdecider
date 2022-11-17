@@ -377,4 +377,10 @@ h2 {
   .mealinstructions {
     font-size: 1em;
   }
+  .bck-fav-btns {
+    display: flex;
+  }
+  .go-bck {
+    margin-left: 20px;
+  }
 }
