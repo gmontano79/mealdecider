@@ -83,7 +83,8 @@ function faveBtn() {
 
   } else {
     currentFaves = JSON.parse(localStorage.getItem('favorites'))
-    if (!currentFaves.includes({ thisMealId: currentIdMeal, meal: currentMeal })) {
+    // for (i = 0; i < currentFaves.length; i++) {
+    if (!currentFaves.some(food => food.meal.includes(currentMeal))) {
       currentFaves.push({ thisMealId: currentIdMeal, meal: currentMeal })
       localStorage.setItem('favorites', JSON.stringify(currentFaves))
 
