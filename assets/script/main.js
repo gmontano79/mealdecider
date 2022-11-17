@@ -4,6 +4,20 @@
 // MEAL DB API
 var mealList = document.querySelector(".meal");
 
+
+let mealList = JSON.parse(localStorage.getItem('favorites'));
+
+for(var i = 0; i < mealList.length; i++) {
+  var listEl = document.createElement('li');
+  var anchorEl = document.createElement('a');
+  var listText = document.createTextNode(mealList[i]);
+
+  anchorEl.appendChild(listText);
+  listEl.appendChild(anchorEl)
+
+  document.getElementById('faves-list').appendChild(listEl)
+}
+
 function loadRecipes() {
   let searchCategory = document.querySelector("#search-cat").value;
   console.log(searchCategory);
@@ -109,11 +123,6 @@ loadCocktail();
 // *************************************
 // Functionality for Add To Favorite Button
 
-
-
-
-// Save value to local storage
-localStorage.setItem()
 
 
 
