@@ -8,15 +8,6 @@ function getMealByID(id) {
     .then(function (data) {
       console.log(data);
 
-      // favorite button
-
-      var favMeal = data.meals[0].strMeal;
-      var favBtn = document.querySelector("#favorites-btn");
-      localStorage.setItem("meal", favMeal);
-      console.log(requestUrl);
-      console.log(favMeal);
-
-
       // meal title
       $("#meal-title").text(data.meals[0].strMeal);
 
