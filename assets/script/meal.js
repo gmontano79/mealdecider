@@ -52,6 +52,17 @@ function getMealByID(id) {
       // instructions
       $(".mealinstructions").text(data.meals[0].strInstructions);
     });
+
+  // *************************************
+  //******** */ favorite button  *******
+
+
+
+
+
+
+
+
 }
 
 $(document).ready(function () {
@@ -60,7 +71,12 @@ $(document).ready(function () {
   const mealId = parameters.split("=")[1];
   console.log(mealId);
   getMealByID(mealId);
+
+
+
+
 });
+
 
 
 function faveBtn() {
@@ -79,3 +95,4 @@ function faveBtn() {
     // then save modified array as the favorites properety to the local storage object 
   }
 }
+
