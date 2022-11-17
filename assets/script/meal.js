@@ -8,6 +8,15 @@ function getMealByID(id) {
     .then(function (data) {
       console.log(data);
 
+      // favorite button
+
+      var favMeal = data.meals[0].strMeal;
+      var favBtn = document.querySelector("#favorites-btn");
+      localStorage.setItem("meal", favMeal);
+      console.log(requestUrl);
+      console.log(favMeal);
+
+
       // meal title
       $("#meal-title").text(data.meals[0].strMeal);
 
@@ -49,6 +58,17 @@ function getMealByID(id) {
       // instructions
       $(".mealinstructions").text(data.meals[0].strInstructions);
     });
+
+  // *************************************
+  //******** */ favorite button  *******
+
+
+
+
+
+
+
+
 }
 
 $(document).ready(function () {
@@ -57,4 +77,9 @@ $(document).ready(function () {
   const mealId = parameters.split("=")[1];
   console.log(mealId);
   getMealByID(mealId);
+
+
+
+
 });
+
