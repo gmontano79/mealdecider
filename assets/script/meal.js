@@ -1,8 +1,14 @@
-let currentMeal
+let currentMeal;
+let currentIdMeal;
+
+
+
+
+
 
 function getMealByID(id) {
   var requestUrl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
-  
+
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
@@ -13,6 +19,8 @@ function getMealByID(id) {
       // meal title
       $("#meal-title").text(data.meals[0].strMeal);
       currentMeal = data.meals[0].strMeal;
+      currentIdMeal = data.meals[0].idMeal;
+      console.log(currentIdMeal);
 
       // meal image
       const mealImage = data.meals[0].strMealThumb;
@@ -53,44 +61,33 @@ function getMealByID(id) {
       $(".mealinstructions").text(data.meals[0].strInstructions);
     });
 
-  // *************************************
-  //******** */ favorite button  *******
-
-
-
-
-
-
-
-
 }
 
 $(document).ready(function () {
   const mealPageUrl = window.location.href;
   const parameters = mealPageUrl.split("?")[1];
-  const mealId = parameters.split("=")[1];
+  mealId = parameters.split("=")[1];
   console.log(mealId);
   getMealByID(mealId);
-
-
-
-
 });
 
 
+//   FAVORITE BUTTON  
 
 function faveBtn() {
   // alert('success')
   let currentFaves = localStorage.getItem('favorites')
-  if(!currentFaves) {
-    localStorage.setItem('favorites', JSON.stringify([currentMeal]))
-    
+  if (!currentFaves) {
+    localStorage.setItem('favorites', JSON.stringify([{ thisMealId: currentIdMeal, meal: currentMeal }]))
+    console.log(localStorage);
+
   } else {
     currentFaves = JSON.parse(localStorage.getItem('favorites'))
-    if(!currentFaves.includes(currentMeal)){
-    currentFaves.push(currentMeal)
+    // if (!currentFaves.includes(currentMeal)) {
+    currentFaves.push({ thisMealId: currentIdMeal, meal: currentMeal })
     localStorage.setItem('favorites', JSON.stringify(currentFaves))
-    }
+
+    // }
     // we wnt to parse the faves that we obtain on line 65
     // (idealy this would be an array because more than one)
     // add current recipe to end of array 

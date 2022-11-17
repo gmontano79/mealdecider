@@ -6,24 +6,30 @@ var mealList = document.querySelector(".meal");
 
 console.log(localStorage.getItem('favorites'))
 
-
+//  ******** FAVORIST LIST ************
 let mealListvar = JSON.parse(localStorage.getItem('favorites'));
 
 // console.log(mealListvar)
 
-if(mealListvar){
+if (mealListvar) {
+  console.log(mealListvar);
 
-for(var i = 0; i < mealListvar.length; i++) {
-  var listEl = document.createElement('li');
-  var anchorEl = document.createElement('a');
-  var listText = document.createTextNode(mealListvar[i]);
+  for (var i = 0; i < mealListvar.length; i++) {
+    var listEl = document.createElement('li');
+    var anchorEl = document.createElement('a');
+    anchorEl.href = href = "./meal.html?id=" + mealListvar[i].thisMealId;
+    var listText = document.createTextNode(mealListvar[i].meal);
 
-  anchorEl.appendChild(listText);
-  listEl.appendChild(anchorEl)
 
-  document.getElementById('faves-list').appendChild(listEl)
+
+    anchorEl.appendChild(listText);
+    listEl.appendChild(anchorEl)
+
+    document.getElementById('faves-list').appendChild(listEl)
+  }
 }
-}
+
+// ********* LOAD RECIPES FROM FETCH **************
 
 function loadRecipes() {
   let searchCategory = document.querySelector("#search-cat").value;
