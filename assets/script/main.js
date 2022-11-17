@@ -4,18 +4,25 @@
 // MEAL DB API
 var mealList = document.querySelector(".meal");
 
+console.log(localStorage.getItem('favorites'))
 
-let mealList = JSON.parse(localStorage.getItem('favorites'));
 
-for(var i = 0; i < mealList.length; i++) {
+let mealListvar = JSON.parse(localStorage.getItem('favorites'));
+
+// console.log(mealListvar)
+
+if(mealListvar){
+
+for(var i = 0; i < mealListvar.length; i++) {
   var listEl = document.createElement('li');
   var anchorEl = document.createElement('a');
-  var listText = document.createTextNode(mealList[i]);
+  var listText = document.createTextNode(mealListvar[i]);
 
   anchorEl.appendChild(listText);
   listEl.appendChild(anchorEl)
 
   document.getElementById('faves-list').appendChild(listEl)
+}
 }
 
 function loadRecipes() {
