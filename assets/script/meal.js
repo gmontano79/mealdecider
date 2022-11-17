@@ -1,6 +1,8 @@
+let currentMeal
+
 function getMealByID(id) {
   var requestUrl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
-
+  
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
@@ -10,6 +12,7 @@ function getMealByID(id) {
 
       // meal title
       $("#meal-title").text(data.meals[0].strMeal);
+      currentMeal = data.meals[0].strMeal;
 
       // meal image
       const mealImage = data.meals[0].strMealThumb;
@@ -73,4 +76,23 @@ $(document).ready(function () {
 
 
 });
+
+
+
+function faveBtn() {
+  // alert('success')
+  let currentFaves = localStorage.getItem('favorites')
+  if(!currentFaves) {
+    localStorage.setItem('favorites', JSON.stringify([currentMeal]))
+    
+  } else {
+    currentFaves = JSON.parse(localStorage.getItem('favorites'))
+    currentFaves.push(currentMeal)
+    localStorage.setItem('favorites', JSON.stringify(currentFaves))
+    // we wnt to parse the faves that we obtain on line 65
+    // (idealy this would be an array because more than one)
+    // add current recipe to end of array 
+    // then save modified array as the favorites properety to the local storage object 
+  }
+}
 
